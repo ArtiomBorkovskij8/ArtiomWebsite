@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    background-color: rgb(153, 15, 15);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkred;
+    z-index: 100;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 30px; 
+}
+
+.navbar a {
+    font-size: 18px;
+    color: gold;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'Lato';
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: gold;
+    transition: .1s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color:gold
+}
+
+.about .content {
+    text-align: center;
+}
+
+.logo a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none; /* Remove default underline */
+}
+
+.logo a:hover {
+    background-color: darkred; /* Change background color on hover */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+footer {
+    background-color: darkred;
+    color: gold;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+

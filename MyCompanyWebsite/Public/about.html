@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../Webpage.css">
+    <style>
+        /* Internal CSS for styling specific to this page */
+        /* styling for the section */
+        .about {
+            text-align: center;
+            padding: 151px 0 50px; 
+        }
+        .about .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: darkred;
+            color: gold;
+            padding: 30px 0;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact {
+            text-align: center;
+        }
+
+        .content {
+            font-size: 100%;
+            margin-bottom: 800px; 
+        }
+
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+          <!-- Header section containing the logo and navigation links -->
+<body>
+    <header class="header">
+        <div class="logo">
+            <!-- Logo linking to the home page -->
+            <a href="../public/Home.html">
+                <img src="../Assets/hao chi de Image 1.png" alt="MyCompany Logo">
+            </a>
+        </div>
+          <!-- Navigation links -->
+        <nav class="navbar">
+            <a href="../public/Home.html">Home</a>
+            <a href="../public/about.html">About</a>
+            <a href="../public/menu.html">Menu</a>
+            <a href="../Public/Delivery Basket.html">Delivery Basket</a> 
+            <a href="../public/contact.html">Contact And Booking</a>
+        </nav>
+    </header>
+    
+
+    <section class="about">    <!-- About section -->
+        <div class="content">
+            <h1>Welcome!</h1>
+            <p>We are delighted to have you here.</p>
+            <p1>Hao Chi De, located in the heart of Peterborough, offers the greatest Chinese food, intriguing specialties, and a unique environment.</p1>
+            <p2>Fresh vegetables, seafood, and premium meats are served straight from the market. Our food, drinks and ambiance make for a really pleasurable experience.</p2>
+            <p3>Hao Chi De is a family-run restaurant/bar that was founded in 1960 and has always taken pleasure in providing excellent, genuine Chinese cuisine.</p3>
+            <p4>We offer speedy delivery so you can enjoy authentic Chinese cuisine in the comfort of your own home. We provide the same great food that is served in the restaurant/bar for takeout.</p4>
+            <p>We invite you to come and experience a restaurant/bar that is truly a cut above the rest.</p>
+            <img src="../Assets/Rev.png" alt="Rev Image">
+            
+        </div>
+    </section>
+    
+    <footer>    <!-- Footer section -->
+        <div class="container">
+            <div class="Contact">
+                Contact:<br>
+                Telephone - 07592264311<br>
+                Email - <a href="mailto:HaoChiDe@gmail.com">HaoChiDe@gmail.com</a><br>
+                Address - Unit 1, 40-42, Bridge St, Peterborough PE1 1DT
+            </div>
+            <div class="social-media-icons">
+                <a href="../public/Home.html"><img src="../Assets/Twitter.webp" alt="Twitter"></a>
+                <a href="../public/Home.html"><img src="../Assets/Instagram.webp" alt="Instagram"></a>
+                <a href="../public/Home.html"><img src="../Assets/Facebook.webp" alt="Facebook"></a>
+            </div>
+        </div>
+        <!-- Link to the contact page -->
+        <a href="../public/contact.html">Contact</a>
+    </footer>
+    
+    <script>    // JavaScript to show footer when scrolled to the bottom
+        
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('footer');
+            var distanceFromTop = document.body.scrollHeight - window.innerHeight;
+            if (window.pageYOffset >= distanceFromTop) {
+                footer.style.bottom = '0';
+            } else {
+                footer.style.bottom = '-100px'; 
+            }
+        });
+    </script>
+</body>
+</html>

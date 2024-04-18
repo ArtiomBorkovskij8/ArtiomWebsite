@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../Webpage.css">
+    <style>
+        /* Footer styles */
+        footer {
+            background-color: darkred;
+            color: gold;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        /* Menu styles */
+        .menu-section {
+            padding: 50px;
+            padding-top: 150px; 
+            margin-bottom: 200px; 
+            color: gold;
+        }
+
+        .menu-option {
+            display: inline-block;
+            width: 45%; 
+            margin: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .menu-option img {
+            width: 100px; 
+            height: 100px; 
+        }
+
+        .menu-option h3 {
+            margin-top: 10px;
+        }
+
+        .menu-option p {
+            margin: 10px 0;
+        }
+
+        .add-to-basket-btn {
+            background-color: darkred;
+            color: gold;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social-media-icons {   /*Social media icon styling*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+   <header class="header">  <!-- Header section containing the logo and navigation links -->
+       <div class="logo">
+           <a href="../public/Home.html"> 
+               <img src="../Assets/hao chi de Image 1.png" alt="MyCompany Logo">
+           </a>
+       </div>
+       <nav class="navbar">  <!-- Navigation links -->
+           <a href="../public/Home.html">Home</a>
+           <a href="../public/about.html">About</a>
+           <a href="../public/Menu.html">Menu</a>
+           <a href="../Public/Delivery Basket.html">Delivery Basket</a>
+           <a href="../public/contact.html">Contact And Booking</a>
+       </nav>
+   </header>
+
+   <!-- Menu Section -->
+   <section class="menu-section">
+       <h2>The Menu</h2>
+       <!-- Menu Options -->
+       <div class="menu-option" data-name="Spring Rolls" data-price="5">
+           <img src="../Assets/SpringRolls.jpg" alt="Spring Rolls">
+           <h3>Spring Rolls (10)</h3>
+           <p>Ground pork, shredded vegetables and seasoning</p>
+           <p>Price: £5</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Salt And Pepper Prawns" data-price="7">
+           <img src="../Assets/salt-and-pepper-prawns.jpg" alt="Salt And Pepper Prawns">
+           <h3>Salt And Pepper Prawns</h3>
+           <p>Prawns, salt, pepper, green onion, vegetable oil</p>
+           <p>Price: £7</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       
+       <div class="menu-option" data-name="Prawn Crackers" data-price="2">
+           <img src="../Assets/PrawnCrackers.jpg" alt="Prawn Crackers">
+           <h3>Prawn Crackers</h3>
+           <p>Price: £2</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Salt And Pepper Chicken Wings" data-price="7">
+           <img src="../Assets/salt-and-pepper-chicken-wings.jpg" alt="Salt And Pepper Chicken Wings">
+           <h3>Salt And Pepper Chicken Wings</h3>
+           <p>Chicken wings, spicey salt, pepper, vegetables </p>
+           <p>Price: £7</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Chicken Fried Rice" data-price="7">
+           <img src="../Assets/chicken-fried-rice.jpg" alt="Chicken Fried Rice">
+           <h3>Chicken Fried Rice</h3>
+           <p>Cut up Chicken, fried rice, vegetables, seasoning</p>
+           <p>Price: £7</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Plain Fried Noodles" data-price="5">
+           <img src="../Assets/Plain-fried-noodles.jpg" alt="Plain Fried Noodles">
+           <h3>Plain Fried Noodles</h3>
+           <p>Dark soy sauce, noodles, bean sprouts</p>
+           <p>Price: £5</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Sweet And Sour Chicken" data-price="8">
+           <img src="../Assets/Sweet-and-sour-chicken.jpg" alt="Sweet And Sour Chicken">
+           <h3>Sweet And Sour Chicken</h3>
+           <p>Chicken, water, white sugar, white vinegar, pineapple juice, vegetable oil, white pepper</p>
+           <p>Price: £8</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Chicken Fried Noodles" data-price="7">
+           <img src="../Assets/chicken-fried-noodles.jpg" alt="Chicken Fried Noodles">
+           <h3>Chicken Fried Noodles</h3>
+           <p>Noodles, oyster sauce, cabbage, soy sauce, boneless chicken</p>
+           <p>Price: £7</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Duck Fried Noodles" data-price="8">
+           <img src="../Assets/duck-fried-noodles.jpg" alt="Duck Fried Noodles">
+           <h3>Duck Fried Noodles</h3>
+           <p>Noodles, oyster sauce, five spice powder, pak choi</p>
+           <p>Price: £8</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Mixed Vegetable Stir-Fry" data-price="6">
+           <img src="../Assets/Mixed-Vegetable-Stir-Fry.jpg" alt="Mixed Vegetable Stir-Fry">
+           <h3>Mixed Vegetable Stir-Fry</h3>
+           <p>Corn, peas, soy sauce, water chestnuts</p>
+           <p>Price: £6</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Shrimp Pad Thai" data-price="9">
+           <img src="../Assets/shrimp-pad-thai.jpg" alt="Shrimp Pad Thai">
+           <h3>Shrimp Pad Thai</h3>
+           <p>bean sprouts, noodles, garlic chives, shrimp</p>
+           <p>Price: £9</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Vegetable Spring Rolls" data-price="4">
+           <img src="../Assets/Vegetable-Spring-Rolls.jpg" alt="Vegetable Spring Rolls">
+           <h3>Vegetable Spring Rolls (10)</h3>
+           <p>Vegetables</p>
+           <p>Price: £4</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Beef and Broccoli" data-price="9">
+           <img src="../Assets/Beef-And-Broccoli.jpg" alt="Beef and Broccoli">
+           <h3>Beef and Broccoli</h3>
+           <P>Beef, broccoli, oyter sauce, sesame oi, soy sauce</P>
+           <p>Price: £9</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Vegetable Fried Rice" data-price="6">
+           <img src="../Assets/Vegetable-Fried-Rice.jpg" alt="Vegetable Fried Rice">
+           <h3>Vegetable Fried Rice</h3>
+           <p>Vegetables, fried rice, soy sauce, sesame oil, pepper, garlic sauce</p>
+           <p>Price: £6</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="General Tso's Chicken" data-price="8">
+           <img src="../Assets/General-Tsos-Chicken.jpg" alt="General Tso's Chicken">
+           <h3>General Tso's Chicken</h3>
+           <p>Chicken, rice, vegetbales</p>
+           <p>Price: £8</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+
+       <div class="menu-option" data-name="Shrimp Fried Rice" data-price="8">
+           <img src="../Assets/shrimp-fried-rice.jpg" alt="Shrimp Fried Rice">
+           <h3>Shrimp Fried Rice</h3>
+           <P>Shrimp, fried rice, peas, carrots, onion, egg</P>
+           <p>Price: £8</p>
+           <button class="add-to-basket-btn">Add to Delivery Basket</button>
+       </div>
+   </section>
+
+   <!-- Footer -->
+   <footer>
+    <div class="container">
+        <div class="Contact">
+            Contact:<br>
+            Telephone - 07592264311<br>
+            Email - <a href="mailto:HaoChiDe@gmail.com">HaoChiDe@gmail.com</a><br>
+            Address - Unit 1, 40-42, Bridge St, Peterborough PE1 1DT
+        </div>
+        <div class="social-media-icons">
+            <a href="../public/Home.html"><img src="../Assets/Twitter.webp" alt="Twitter"></a>
+            <a href="../public/Home.html"><img src="../Assets/Instagram.webp" alt="Instagram"></a>
+            <a href="../public/Home.html"><img src="../Assets/Facebook.webp" alt="Facebook"></a>
+        </div>
+    </div>
+    <!-- Link to the contact page -->
+    <a href="../public/contact.html">Contact</a>
+</footer>
+
+   <script>
+       // Function to handle adding items to the delivery basket
+       function addToBasket(event) {
+           const menuItem = event.target.closest('.menu-option');
+           if (menuItem) {
+               const name = menuItem.dataset.name;
+               const price = parseFloat(menuItem.dataset.price);
+               const item = { name, price };
+               let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+               basketItems.push(item);
+               localStorage.setItem('basketItems', JSON.stringify(basketItems));
+               alert('Item added to delivery basket!');
+           }
+       }
+
+       // Add event listeners to "Add to Delivery Basket" buttons
+       const addToBasketButtons = document.querySelectorAll('.add-to-basket-btn');
+       addToBasketButtons.forEach(button => {
+           button.addEventListener('click', addToBasket);
+       });
+   </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Basket</title>
+    <link rel="stylesheet" href="../Webpage.css">
+    <style>
+        /* Footer */
+        footer {
+            background-color: darkred;
+            color: gold;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: auto; 
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            margin: 0; 
+        }
+          /* Header styling */
+        .header {  
+           
+        }
+
+        .main-content {
+            
+            flex: 1; 
+            padding: 20px; 
+            padding-top: 200px; 
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        .content-box {
+            width: 45%; 
+            background-color: white; 
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        form {     /* form styling */
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkred;
+            color: gold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Delivery Basket */
+        .basket-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .basket-item h4 {
+            margin-top: 0;
+        }
+
+        .basket-item p {
+            margin-bottom: 5px;
+        }
+
+        .remove-btn {
+            background-color: darkred;
+            color: gold;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .total {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        /* Thank You Message */
+        .thank-you-message {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-media-icons {   /* social media icon styling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+   <header class="header">   <!-- Header section containing the logo and navigation links -->
+       <div class="logo">
+           <a href="../public/Home.html"> 
+               <img src="../Assets/hao chi de Image 1.png" alt="MyCompany Logo">
+           </a>
+       </div>
+       <nav class="navbar">    <!-- Navigation links -->
+           <a href="../public/Home.html">Home</a>
+           <a href="../public/about.html">About</a>
+           <a href="../public/Menu.html">Menu</a>
+           <a href="../Public/Delivery Basket.html">Delivery Basket</a>
+           <a href="../public/contact.html">Contact And Booking</a>
+       </nav>
+   </header>
+
+   <!-- Main Content -->
+   <div class="main-content">
+       <!-- Food Selection Box -->
+       <div class="content-box">
+           <h3>Selected Food Items</h3>
+           <div id="basket-items"></div>
+           <div class="total" id="total-price">Total: £0</div>
+           <div class="delivery-charge" id="delivery-charge">Delivery Charge: £0</div>
+           <div class="tip" id="tip">Tip: £0</div>
+       </div>
+
+       <!-- Contact Information Box -->
+       <div class="content-box">
+           <form id="delivery-form">
+               <label for="firstName">First Name:</label>
+               <input type="text" id="firstName" name="firstName" required>
+
+               <label for="lastName">Last Name:</label>
+               <input type="text" id="lastName" name="lastName" required>
+
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+
+               <label for="phoneNumber">Phone Number:</label>
+               <input type="tel" id="phoneNumber" name="phoneNumber" required>
+              
+               <label for="address">Address:</label>
+               <input type="text" id="address" name="address" required>
+
+               <label for="postcode">Postcode:</label>
+               <input type="text" id="postcode" name="postcode" required>
+
+               <label for="approximateDeliveryTime">Approximate Delivery Time:</label>
+               <select name="approximateDeliveryTime" required></select>
+
+               <button type="submit">Place Order</button>
+           </form>
+       </div>
+   </div>
+
+   <!-- Footer -->
+   <footer>
+    <div class="container">
+        <div class="Contact">
+            Contact:<br>
+            Telephone - 07592264311<br>
+            Email - <a href="mailto:HaoChiDe@gmail.com">HaoChiDe@gmail.com</a><br>
+            Address - Unit 1, 40-42, Bridge St, Peterborough PE1 1DT
+        </div>
+        <div class="social-media-icons">
+            <a href="../public/Home.html"><img src="../Assets/Twitter.webp" alt="Twitter"></a>
+            <a href="../public/Home.html"><img src="../Assets/Instagram.webp" alt="Instagram"></a>
+            <a href="../public/Home.html"><img src="../Assets/Facebook.webp" alt="Facebook"></a>
+        </div>
+    </div>
+    <!-- Link to the contact page -->
+    <a href="../public/contact.html">Contact</a>
+</footer>
+
+   <!-- Thank You Message -->
+   <div class="thank-you-message" id="thank-you-message">
+       <h2>Thank You For Your Order!</h2>
+   </div>
+
+   <script>
+       // Function to populate the approximate delivery time dropdown
+       function populateTimeOptions() {
+           const select = document.querySelector('select[name="approximateDeliveryTime"]');
+           const now = new Date();
+           const optionsCount = 10;
+           const minimumTime = now.getTime() + 60 * 60 * 1000; // Current time + 1 hour
+           let startTime = new Date(minimumTime);
+
+           for (let i = 0; i < optionsCount; i++) {
+               const option = document.createElement('option');
+               option.text = startTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+               option.value = startTime.toISOString(); // Using ISO string as value
+               select.add(option);
+               startTime.setHours(startTime.getHours() + 1); // Increment time by 1 hour
+           }
+       }
+
+       
+       window.onload = populateTimeOptions;
+
+       // Function to display basket items
+       function displayBasketItems() {
+           const basketItemsContainer = document.getElementById('basket-items');
+           const totalContainer = document.getElementById('total-price');
+           const deliveryChargeContainer = document.getElementById('delivery-charge');
+           const tipContainer = document.getElementById('tip');
+           basketItemsContainer.innerHTML = ''; // Clear previous items
+           let total = 0;
+           const basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+           basketItems.forEach(item => {
+               const itemElement = document.createElement('div');
+               itemElement.classList.add('basket-item');
+               itemElement.innerHTML = `
+                   <h4>${item.name}</h4>
+                   <p>Price: £${item.price}</p>
+                   <button class="remove-btn" onclick="removeItem('${item.name}', ${item.price})">Remove</button>
+               `;
+               basketItemsContainer.appendChild(itemElement);
+               total += item.price;
+           });
+           const deliveryCharge = 5; // Assuming a fixed delivery charge of £5
+           total += deliveryCharge;
+           const tipPercentage = 0.1; // 10% tip
+           const tip = total * tipPercentage;
+           total += tip;
+           totalContainer.textContent = `Total: £${total.toFixed(2)}`;
+           deliveryChargeContainer.textContent = `Delivery Charge: £${deliveryCharge}`;
+           tipContainer.textContent = `Tip: £${tip.toFixed(2)}`;
+       }
+
+       // Remove item from basket
+       function removeItem(name, price) {
+           let basketItems = JSON.parse(localStorage.getItem('basketItems')) || [];
+           basketItems = basketItems.filter(item => item.name !== name || item.price !== price);
+           localStorage.setItem('basketItems', JSON.stringify(basketItems));
+           displayBasketItems();
+       }
+
+       // Form submission event
+       document.getElementById('delivery-form').addEventListener('submit', function(event) {
+           event.preventDefault(); 
+
+           // Retrieve form data
+           const formData = new FormData(this);
+           const contactInfo = {};
+           formData.forEach((value, key) => {
+               contactInfo[key] = value;
+           });
+
+           
+           console.log(contactInfo);
+
+           // Clear the form after submission
+           this.reset();
+
+           // Display thank you message
+           const thankYouMessage = document.getElementById('thank-you-message');
+           thankYouMessage.style.display = 'block';
+           setTimeout(() => {
+               thankYouMessage.style.opacity = '0';
+               setTimeout(() => {
+                   thankYouMessage.style.display = 'none';
+                   thankYouMessage.style.opacity = '1';
+               }, 1000);
+           }, 3000);
+
+           // Clear basket items and reset total price
+           localStorage.removeItem('basketItems');
+           displayBasketItems();
+       });
+
+       // Display basket items when the page loads
+       window.onload = function() {
+           populateTimeOptions();
+           displayBasketItems();
+       };
+   </script>
+</body>
+</html>

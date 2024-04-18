@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../Webpage.css">
+    <style>
+    
+
+        
+        .slider-container {   /*slider styling*/
+            position: relative;
+            margin-top: 50px;
+            overflow: hidden;
+            background-color: darkred;
+        }
+
+        .slider-container img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Content styles */
+        .content {
+            color: gold;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .content1 {
+            color: gold;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content1 img {
+            width: 90%;
+        }
+
+        .content2 {
+            color: gold;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content3 {
+            color: gold;
+            padding: 50px;
+            text-align: center;
+        }
+
+
+
+        /* Footer styles */
+        footer {
+            background-color: darkred;
+            color: gold;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .contact {
+            text-align: left;
+        }
+
+        .menu-button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: darkred;
+            color: gold;
+            text-align: center;
+            font-size: 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none; 
+        }
+
+        .menu-button:hover {
+            background-color: red; 
+        }
+
+        .social-media-icons {  /*Social media styling*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">  <!-- Header section containing the logo and navigation links -->
+        <div class="logo">
+            <img src="../Assets/hao chi de Image 1.png" alt="MyCompany Logo">
+        </div>
+        <nav class="navbar">  <!-- Navigation links -->
+            <a href="../public/Home.html">Home</a>
+            <a href="../public/about.html">About</a>
+            <a href="../public/Menu.html">Menu</a>
+            <a href="../Public/Delivery Basket.html">Delivery Basket</a>
+            <a href="../public/contact.html">Contact And Booking</a>
+        </nav>
+    </header>
+
+    <!-- Slider container -->
+    <div class="slider-container">
+        <img src="../Assets/Interior.jpg" alt="Interior Slider Image">
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to Hao Chi De</h2>
+            <p>Located in the center of Peterborough. The  best Chinese food, interesting dishes, and a distinctive atmosphere can be found at Hao Chi De.</p>
+            <p2>Fresh vegetables, seafood, and premium meats are served straight from the market. Our food and ambiance make for a really pleasurable eating experience.</p2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content1">
+            <h2>Where we are located</h2> 
+            <img src="../Assets/Location .png"
+        </div>
+    </div>
+    <div class="container">
+        <div class="content2">
+            <h1>Unit 1, 40-42, Bridge St, Peterborough PE1 1DT</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content3">
+            <div class="container">
+                <div class="content3">
+                    <h1>Opening Hours</h1>
+                    Monday - Friday: 4:00 PM - 12:00 AM (24 hour open for delivery)<br>
+                    Saturday: 4:00 PM - 2:00 AM (24 hour open for delivery)<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../public/Menu.html" class="menu-button">The Menu</a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="Contact">
+                Contact:<br>
+                Telephone - 07592264311<br>
+                Email - <a href="mailto:HaoChiDe@gmail.com">HaoChiDe@gmail.com</a><br>
+                Address - Unit 1, 40-42, Bridge St, Peterborough PE1 1DT
+            </div>
+            <div class="social-media-icons">
+                <a href="../public/Home.html"><img src="../Assets/Twitter.webp" alt="Twitter"></a>
+                <a href="../public/Home.html"><img src="../Assets/Instagram.webp" alt="Instagram"></a>
+                <a href="../public/Home.html"><img src="../Assets/Facebook.webp" alt="Facebook"></a>
+            </div>
+        </div>
+        <!-- Link to the contact page -->
+        <a href="../public/contact.html">Contact</a>
+    </footer>
+    <script>
+        // JavaScript 
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            var distanceFromTop = document.body.scrollHeight - window.innerHeight;
+            if (window.pageYOffset >= distanceFromTop) {
+                footer.style.bottom = '0';
+            } else {
+                footer.style.bottom = '-100px'; 
+            }
+        });
+    </script>
+</body>
+</html>

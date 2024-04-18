@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <!-- Meta tags for defining character set and viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../Webpage.css">
+    <style>
+        /* Internal CSS for styling specific to this page */    /* Styling for the contact section */
+        .contact {
+            padding-top: 220px; 
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: darkred;
+            color: gold;
+            padding: 10px 0; 
+            text-align: center;
+        }
+
+        .contact-info {    /* Styling for the contact information section */
+            background-color: darkred;
+            border: 1px solid darkred;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: gold;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            color: gold;
+        }
+
+        .contact-info a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {    /* Styling for the contact form */
+            max-width: 500px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            color: gold; 
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid darkred;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: darkred;
+            color: gold;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #a30000;
+        }
+
+        .social-media-icons {    /* Styling for the social media icons */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .reservation {    /* Additional styling for the reservation section */
+            padding-top: 50px;
+        }
+
+        .reservation-header {
+            text-align: center;
+            font-size: 24px;
+            color: gold;
+            margin-bottom: 20px;
+        }
+
+        .reservation-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            color: gold;
+        }
+
+        .reservation-form input[type="text"],
+        .reservation-form input[type="tel"],
+        .reservation-form input[type="email"],
+        .reservation-form input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid darkred;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .reservation-form input[type="submit"] {
+            background-color: darkred;
+            color: gold;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .reservation-form input[type="submit"]:hover {
+            background-color: #a30000;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">   <!-- Header section containing the logo and navigation links -->
+        <div class="logo">
+            <a href="../public/Home.html"> 
+                <img src="../Assets/hao chi de Image 1.png" alt="MyCompany Logo">
+            </a>
+        </div>
+        <nav class="navbar">   <!-- Navigation links -->
+            <a href="../public/Home.html">Home</a>
+            <a href="../public/about.html">About</a>
+            <a href="../public/menu.html">Menu</a>
+            <a href="../Public/Delivery Basket.html">Delivery Basket</a>
+            <a href="../public/contact.html">Contact And Booking</a>
+        </nav>
+    </header>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, please feel free to get in touch with us.</p>
+            <p>Phone: <a href="tel:07592264311">07592264311</a></p>
+            <p>Email: <a href="mailto:HaoChiDe@gmail.com">HaoChiDe@gmail.com</a></p>
+            <p>Address: Unit 1, 40-42, Bridge St, Peterborough PE1 1DT</p>
+        </div>
+        <div class="contact-form">   <!-- Section for contact form -->
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+   <!-- Reservation Section -->
+   <section class="reservation">
+    <h2 class="reservation-header">Book a Reservation</h2>
+    <div class="reservation-form">
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="tel" name="phone" placeholder="Telephone Number" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <!-- Disable date input for Sundays -->
+            <input type="date" id="reservation-date" name="reservation-date" required onchange="updateTimeSlots()" 
+                min="2024-01-01" max="2024-12-31" oninput="checkDayOfWeek(this)">
+            <br>
+            <select name="reservation-time" id="reservation-time" required>
+                <!-- Options will be dynamically updated using JavaScript -->
+            </select><br>
+            <input type="submit" value="Book Reservation">
+        </form>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="Contact">
+                Contact:<br>
+                Telephone - 07592264311<br>
+                Email - <a href="mailto:HaoChiDe@gmail.com">HaoChiDe@gmail.com</a><br>
+                Address - Unit 1, 40-42, Bridge St, Peterborough PE1 1DT
+            </div>
+        </div>
+        <div class="social-media-icons">
+            <a href="../public/Home.html"><img src="../Assets/Twitter.webp" alt="Twitter"></a>
+            <a href="../public/Home.html"><img src="../Assets/Instagram.webp" alt="Instagram"></a>
+            <a href="../public/Home.html"><img src="../Assets/Facebook.webp" alt="Facebook"></a>
+        </div>
+    </footer>
+    <script>
+        function updateTimeSlots() {
+            const dateInput = document.getElementById('reservation-date');
+            const timeSelect = document.getElementById('reservation-time');
+            const selectedDate = new Date(dateInput.value);
+            const dayOfWeek = selectedDate.getDay(); 
+
+            // Clear previous options
+            timeSelect.innerHTML = '';
+
+            if (dayOfWeek === 0) { // Sunday  // Show message or disable reservation for Sundays
+                
+                timeSelect.innerHTML = '<option value="" disabled>No reservations on Sundays</option>';
+            } else if (dayOfWeek === 6) { // Saturday // Available time slots from 4pm to 2am
+                
+                addTimeSlots(timeSelect, '16:00', '23:30'); // Example time slots
+                addTimeSlots(timeSelect, '00:00', '02:00'); 
+            } else { // Monday to Friday // Available time slots from 4pm to 12am 
+                
+                addTimeSlots(timeSelect, '16:00', '23:30'); // Example time slots
+            }
+        }
+
+        function addTimeSlots(selectElement, startTime, endTime) {
+            const start = new Date(`2000-01-01T${startTime}`);
+            const end = new Date(`2000-01-01T${endTime}`);
+
+            while (start <= end) {
+                const option = document.createElement('option');
+                const timeString = start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                option.text = timeString;
+                option.value = timeString;
+                selectElement.add(option);
+                start.setMinutes(start.getMinutes() + 30); // Increment by 30 minutes
+            }
+        }
+
+        // updateTimeSlots() initially to set initial time slots
+        updateTimeSlots();
+
+        // Function to check if the selected date is a Sunday
+        function checkDayOfWeek(input) {
+            const selectedDate = new Date(input.value);
+            if (selectedDate.getDay() === 0) {
+                alert('No reservations available on Sundays.');
+                
+                input.value = ''; // Reset the date input to clear the selection
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
+
